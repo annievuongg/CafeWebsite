@@ -1,16 +1,75 @@
-.background {
-  background-color: black;
+// Building a Responsive Grid-View
 
+* {
+  box-sizing: border-box;
 }
 
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+////////////////
+
+img, video, canvas {
+  max-width: 100%;
+}
+
+
+.background {
+  background-color: black;
+}
 // ** Header elements styling **
+
 .header-content {
   position: relative;
-
 }
 
 .header-image {
-opacity: 0.8;
+  opacity: 0.8;
+  max-width: 100%;
 }
 
 .img-responsive {
@@ -26,26 +85,28 @@ opacity: 0.8;
 }
 
 #restaurant-name {
-  font-size: 60px;
+  font-size: 10vw;
   color: white;
-
 }
-
 // ** Footer styling **
+
 .footer {
   color: grey;
   background-color: black;
   padding-top: 15px;
   padding-bottom: 15px;
+  padding-right: 30px;
   text-align: right;
+  position: absolute;
+  bottom: 0;
   width: 100%;
 }
-
 // ** Navbar-related styling **
 .navbar {
   border-radius: 0;
   background-color: black;
   border-color: black;
+  // height: 48px;
 }
 // Sticky navbar after header
 .affix {
@@ -54,33 +115,48 @@ opacity: 0.8;
   z-index: 9999 !important;
 }
 
+#main-navbar {}
+
 .nav-text {
   font-size: 17px;
 }
 // Centered and justified navbar text
+// Desktop screen size
 @media (min-width: 768px) {
+  #main-navbar {
+    text-align: center;
+  }
+
   .navbar-nav {
     margin: 0 auto;
-    display: table;
     table-layout: auto;
     float: none;
     width: 100%;
+    min-width: 770px;
   }
 
   .navbar-nav > li {
-    display: table-cell;
+    display: inline-block;
     float: none;
     text-align: center;
   }
 }
-
-#nav-item {
-  padding-left: 20px;
+// Small screen size / tablet / mobile
+@media (max-width: 769px) {
+  #main-navbar {
+    text-align: right;
+  }
 }
 
+#nav-item li a {
+  padding-left: 20px;
+  height: 48px;
+}
 // ** Landing page styling **
+
 #about-us {
   padding-left: 100px;
   padding-right: 100px;
-  padding-bottom: 15px;
+  padding-bottom: 30px;
+  height: auto;
 }
