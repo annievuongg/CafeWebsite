@@ -85,19 +85,19 @@ img, video, canvas {
 }
 
 #restaurant-name {
-  font-size: 10vw;
+  font-size: 50px;
   color: white;
 }
 // ** Footer styling **
 
 .footer {
+  font-size: 10px;
   color: grey;
   background-color: black;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-right: 30px;
   text-align: right;
-  position: absolute;
   bottom: 0;
   width: 100%;
 }
