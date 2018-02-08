@@ -31,6 +31,9 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# PDF.js viewer packaged as a Rails engine. Source: https://github.com/senny/pdfjs_viewer-rails
+gem 'pdfjs_viewer-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
