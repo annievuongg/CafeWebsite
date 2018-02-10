@@ -1,14 +1,15 @@
-<div class="background">
+<header>
+<div class="container-fluid background">
   <div class="header-content text-center">
-    <%= image_tag("background-cofee-shop.jpg", alt: "Coffee Shop", class: "header-image") %>
+    <%= image_tag("MP.jpg", alt: "Coffee Shop", class: "header-image") %>
     <!-- Could use responsive font size here -->
     <div class="centered-text" id="restaurant-name">
-      Cafe Name
+      <h1>Manchester Press</h1>
     </div>
   </div>
 </div>
 
-<nav class="navbar navbar-inverse navbar-toggleable-md" data-spy="affix" data-offset-top="570">
+<nav class="navbar navbar-inverse navbar-toggleable-md" data-spy="affix" data-offset-top="565">
   <div class="container-fluid">
     <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="icon-bar"></span>
@@ -16,25 +17,16 @@
       <span class="icon-bar"></span>
     </button>
 
-    <div class="collapse navbar-collapse nav-text " id="main-navbar">
+    <div class="collapse navbar-collapse nav-text" id="main-navbar">
       <ul class="nav navbar-nav ml-auto">
         <li class="active" id="nav-item">
           <%= link_to("Cafe Name", root_path) %>
         </li>
         <li id="nav-item">
-          <%= link_to("What's On", '#') %>
-        </li>
-        <li id="nav-item">
           <%= link_to("Menu", menu_sample_menu_path) %>
         </li>
         <li id="nav-item">
-          <%= link_to("Functions", '#') %>
-        </li>
-        <li id="nav-item">
-          <%= link_to("Contact", '#') %>
-        </li>
-        <li id="nav-item">
-          <%= link_to("Reviews", '#') %>
+          <%= link_to("Contact", contact_contact_us_path) %>
         </li>
         <li id="nav-item">
           <%= link_to("Book a Table", '#') %>
@@ -43,3 +35,4 @@
     </div>
   </div>
 </nav>
+</header>

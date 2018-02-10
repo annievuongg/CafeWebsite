@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  get 'bookings/book_a_table'
+  get 'bookings/booked'
+
   root 'home#index'
   get 'menu/sample_menu'
+  get 'contact/contact_us'
 
   mount PdfjsViewer::Rails::Engine => "/pdfjs", as: 'pdfjs'
 

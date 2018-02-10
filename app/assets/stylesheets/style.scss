@@ -1,59 +1,41 @@
-// Building a Responsive Grid-View
-
-* {
-  box-sizing: border-box;
-}
-
-.col-1 {
-  width: 8.33%;
-}
-
-.col-2 {
-  width: 16.66%;
-}
-
-.col-3 {
-  width: 25%;
-}
-
-.col-4 {
-  width: 33.33%;
-}
-
-.col-5 {
-  width: 41.66%;
-}
-
-.col-6 {
-  width: 50%;
-}
-
-.col-7 {
-  width: 58.33%;
-}
-
-.col-8 {
-  width: 66.66%;
-}
-
-.col-9 {
-  width: 75%;
-}
-
-.col-10 {
-  width: 83.33%;
-}
-
-.col-11 {
-  width: 91.66%;
-}
-
-.col-12 {
-  width: 100%;
-}
+// need to make breakpoints for larger screens
 ////////////////
 
-img, video, canvas {
+body * {
+  font-family: Book Antiqua, Palatino, serif;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: #ffc266;
+}
+
+
+.bod-container {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 50px;
+  height: auto;
+}
+
+canvas,
+img,
+video {
   max-width: 100%;
 }
 
@@ -85,15 +67,17 @@ img, video, canvas {
 }
 
 #restaurant-name {
-  font-size: 50px;
+  font-size: 70px;
+  // color: #ffc266;
   color: white;
 }
 // ** Footer styling **
 
-.footer {
-  font-size: 10px;
+.footer > p {
+  font-size: 10px !important;
   color: grey;
   background-color: black;
+  margin: 0;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 30px;
@@ -103,6 +87,7 @@ img, video, canvas {
   width: 100%;
 }
 // ** Navbar-related styling **
+
 .navbar {
   border-radius: 0;
   background-color: black;
@@ -110,6 +95,7 @@ img, video, canvas {
   // height: 48px;
 }
 // Sticky navbar after header
+
 .affix {
   top: 0;
   width: 100%;
@@ -141,6 +127,14 @@ img, video, canvas {
     float: none;
     text-align: center;
   }
+
+  .navbar-inverse .navbar-nav > li > a {
+    color: white;
+  }
+
+  .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    color: #ffc266;
+  }
 }
 // Small screen size / tablet / mobile
 @media (max-width: 769px) {
@@ -153,11 +147,32 @@ img, video, canvas {
   padding-left: 20px;
   height: 48px;
 }
-// ** Landing page styling **
+// ** Menu page styling **
 
-#about-us {
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-bottom: 30px;
-  height: auto;
+#menu-tab {
+  padding-bottom: 15px;
+  // border-bottom: 3px solid #000;
+}
+
+#download-menu {
+  font-size: 20px;
+}
+
+.nav-pills > li > a {
+  // color: black;
+  padding: 5px 40px;
+  font-size: 20px;
+  border-radius: 0;
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:focus,
+.nav-pills > li.active > a:hover {
+  background-color: #ffc266;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
