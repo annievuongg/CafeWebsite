@@ -1,23 +1,23 @@
 <div class="container-fluid bod-container" id="menu">
   <h2>Menu</h2>
-  <div id="menu-tab">
+  <div id="menu-tab" class="container-fluid">
     <div class="row">
       <div class="col-sm-9">
         <ul class="nav nav-pills">
           <li class="active">
-            <%= link_to "Breakfast", '#breakfast', :class => "custom-nav-pills", data: { toggle: 'tab'} %>
+            <%= link_to "Breakfast", '#breakfast', data: { toggle: 'tab'} %>
           </li>
           <li>
             <%= link_to "Drinks", '#drinks', data: { toggle: 'tab'} %>
           </li>
         </ul>
       </div>
-      <div class="col-sm-3">
-        <%= link_to "Full menu (pdf)", pdfjs.full_path(file: asset_path('files/sample.pdf')), id: 'download-menu' %>
+      <div class="col-sm-9">
+        <%= link_to "Full menu (pdf)", pdfjs.full_path(file: asset_path('files/sample.pdf')), class: "pull-right", id: "download-menu" %>
       </div>
     </div>
   </div>
-  <div class="content">
+  <div class="container-fluid">
     <div class="row">
       <div class="tab-content">
         <div id="breakfast" class="tab-pane active fade in">

@@ -34,6 +34,13 @@ gem 'jbuilder', '~> 2.5'
 # PDF.js viewer packaged as a Rails engine. Source: https://github.com/senny/pdfjs_viewer-rails
 gem 'pdfjs_viewer-rails'
 
+# Send e-mail straight from forms in Rails with I18n, validations, attachments and request information.
+gem 'mail_form', '~> 1.5', '>= 1.5.1'
+
+# gem 'gmaps4rails'
+# gem 'underscore-rails'
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -1,38 +1,35 @@
 <header>
-<div class="container-fluid background">
-  <div class="header-content text-center">
-    <%= image_tag("MP.jpg", alt: "Coffee Shop", class: "header-image") %>
+  <div id="header">
+    <%= link_to image_tag("MP.jpg", alt: "Manchester Press Shop", id: "header-image", class: "center"), url_for(root_path) %>
     <!-- Could use responsive font size here -->
-    <div class="centered-text" id="restaurant-name">
+    <div id="restaurant-name">
       <h1>Manchester Press</h1>
     </div>
   </div>
-</div>
-
-<nav class="navbar navbar-inverse navbar-toggleable-md" data-spy="affix" data-offset-top="565">
-  <div class="container-fluid">
-    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-
-    <div class="collapse navbar-collapse nav-text" id="main-navbar">
-      <ul class="nav navbar-nav ml-auto">
-        <li class="active" id="nav-item">
-          <%= link_to("Cafe Name", root_path) %>
-        </li>
-        <li id="nav-item">
-          <%= link_to("Menu", menu_sample_menu_path) %>
-        </li>
-        <li id="nav-item">
-          <%= link_to("Contact", contact_contact_us_path) %>
-        </li>
-        <li id="nav-item">
-          <%= link_to("Book a Table", '#') %>
-        </li>
-      </ul>
+  <nav id="main-navbar" class="navbar navbar-inverse navbar-toggleable-md" data-spy="affix" data-offset-top="550">
+    <div class="container-fluid">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-items" aria-controls="navbar-items" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-items">
+        <ul class="nav navbar-nav ml-auto">
+          <li class="active">
+            <%= link_to("Manchester Press", root_path) %>
+          </li>
+          <li>
+            <%= link_to("Menu", menu_sample_menu_path) %>
+          </li>
+          <li>
+            <%= link_to("Contact", contact_contact_us_path) %>
+          </li>
+          <li>
+            <%= link_to("Book a Table", bookings_book_a_table_path) %>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+
 </header>

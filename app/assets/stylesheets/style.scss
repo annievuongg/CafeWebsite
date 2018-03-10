@@ -1,16 +1,18 @@
 // need to make breakpoints for larger screens
 ////////////////
+$light-orange: #ffc266;
+$main-font: Book Antiqua, Palatino, serif; ////////////////////////////////////
 
 body * {
-  font-family: Book Antiqua, Palatino, serif;
+  font-family: $main-font;
 }
 
 h1 {
-  font-size: 70px;
+  font-size: 4.6em;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 2.6em;
 }
 
 p {
@@ -22,15 +24,7 @@ a {
 }
 
 a:hover {
-  color: #ffc266;
-}
-
-
-.bod-container {
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-bottom: 50px;
-  height: auto;
+  color: $light-orange;
 }
 
 canvas,
@@ -38,85 +32,115 @@ img,
 video {
   max-width: 100%;
 }
+// General classes
+/* PHONE VERSION */
+@media only screen and (min-width: 320px) {
+  .bod-container {
+    padding: 0 30px 50px;
+  }
+  // ** Header elements styling **
+  #header-image {
+    opacity: 0.8;
+    max-height: 565px;
+    max-width: 100%;
+  }
 
-.background {
-  background-color: black;
-}
-// ** Header elements styling **
+  #header {
+    background-color: black;
+    position: relative;
+  }
 
-.header-content {
-  position: relative;
-}
-
-.header-image {
-  opacity: 0.8;
-  max-height: 565px;
-  max-width: 100%;
-}
-
-.img-responsive {
-  display: initial;
-}
-
-.centered-text {
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#restaurant-name {
-  font-size: 70px;
-  // color: #ffc266;
-  color: white;
-}
-// ** Footer styling **
-
-.footer > p {
-  font-size: 10px !important;
-  color: grey;
-  background-color: black;
-  margin: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 30px;
-  text-align: right;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-// ** Navbar-related styling **
-
-.navbar {
-  border-radius: 0;
-  background-color: black;
-  border-color: black;
-  // height: 48px;
-}
-// Sticky navbar after header
-
-.affix {
-  top: 0;
-  width: 100%;
-  z-index: 9999 !important;
-}
-
-#main-navbar {}
-
-.nav-text {
-  font-size: 17px;
-}
-// Centered and justified navbar text
-// Desktop screen size
-@media (min-width: 768px) {
-  #main-navbar {
+  #restaurant-name {
     text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  // ** Navbar-related styling **
+  #main-navbar {
+    border-radius: 0;
+    background-color: black;
+    border-color: black;
+  }
+
+  #navbar-items {
+    text-align: right;
+    font-size: 17px;
+  }
+  // Sticky navbar after header
+  .affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+  }
+  // ** Footer styling **
+  .footer > p {
+    font-size: 10px !important;
+    color: grey;
+    background-color: black;
+    margin: 0;
+    padding: 10px 30px;
+    text-align: right;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  // ** Menu page styling **
+  #menu-tab {
+    padding-bottom: 15px;
+    // border-bottom: 3px solid #000;
+  }
+
+  #download-menu {
+    text-align: right;
+  }
+
+  .nav-pills > li > a {
+    padding: 5px 40px;
+    font-size: 20px;
+    border-radius: 0;
+  }
+
+  .nav-pills > li.active > a,
+  .nav-pills > li.active > a:focus,
+  .nav-pills > li.active > a:hover {
+    background-color: #ffc266;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+// *** Small devices and above ***
+@media only screen and (min-width : 768px) {
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .bod-container {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 50px;
+    height: auto;
+  }
+
+  #navbar-items {
+    text-align: center;
+  }
+  // Change the colour of navbar hover
+  .navbar-inverse .navbar-nav > li > a:focus,
+  .navbar-inverse .navbar-nav > li > a:hover {
+    color: $light-orange;
   }
 
   .navbar-nav {
-    margin: 0 auto;
-    table-layout: auto;
     float: none;
     width: 100%;
     min-width: 770px;
@@ -125,54 +149,5 @@ video {
   .navbar-nav > li {
     display: inline-block;
     float: none;
-    text-align: center;
   }
-
-  .navbar-inverse .navbar-nav > li > a {
-    color: white;
-  }
-
-  .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-    color: #ffc266;
-  }
-}
-// Small screen size / tablet / mobile
-@media (max-width: 769px) {
-  #main-navbar {
-    text-align: right;
-  }
-}
-
-#nav-item li a {
-  padding-left: 20px;
-  height: 48px;
-}
-// ** Menu page styling **
-
-#menu-tab {
-  padding-bottom: 15px;
-  // border-bottom: 3px solid #000;
-}
-
-#download-menu {
-  font-size: 20px;
-}
-
-.nav-pills > li > a {
-  // color: black;
-  padding: 5px 40px;
-  font-size: 20px;
-  border-radius: 0;
-}
-
-.nav-pills > li.active > a,
-.nav-pills > li.active > a:focus,
-.nav-pills > li.active > a:hover {
-  background-color: #ffc266;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
 }

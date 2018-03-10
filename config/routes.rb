@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get 'menu/sample_menu'
   get 'contact/contact_us'
+  resources :contact, only: [:new, :create]
 
   mount PdfjsViewer::Rails::Engine => "/pdfjs", as: 'pdfjs'
 
